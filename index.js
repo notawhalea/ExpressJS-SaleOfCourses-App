@@ -1,6 +1,8 @@
 const express = require('express');
-const path = require('path')
 const exphbs = require('express-handlebars')
+const mainRouter = require('./routes/main')
+const coursesRouter = require('./routes/courses')
+const addRouter = require('./routes/add')
 
 const app = express();
 
@@ -12,20 +14,12 @@ const hbs = exphbs.create({
 app.engine('hbs', hbs.engine)
 app.set('view engine', 'hbs')
 app.set('views', 'views')
+app.use(express.static('public'))
+app.use('/', mainRouter)
+app.use('/courses', coursesRouter)
+app.use('/add', addRouter)
+
 const PORT = process.env.PORT || 3000;
-
-app.get('/', (req, res) => {
-    // res.status(200);
-    // res.sendFile(path.join(__dirname, 'views', 'index.hbs'))
-    res.render('index')
-})
-
-app.get('/about', (req, res) => {
-    // res.status(200);
-    // res.sendFile(path.join(__dirname, 'views', 'about.hbs'))
-    res.render('about')
-})
-
 app.listen(PORT, () => {
     console.log('Im working')
 })

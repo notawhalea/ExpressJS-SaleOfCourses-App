@@ -1,0 +1,14 @@
+.nav-wrapper {
+    padding: 0 2rem 3rem 2rem;
+    font-size: 2.5rem;
+    background-color: burlywood;
+}
+html {
+    font-size: 24px;
+}
+.active {
+    height: 73px;
+}
+a:hover{
+    height: 73px;
+}
