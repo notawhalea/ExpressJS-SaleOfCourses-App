@@ -1,7 +1,7 @@
 {
   "name": "expressjs-saleofcourses-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "Course shop in express.js, handlebars, materialize.css",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -12,7 +12,7 @@
     "url": "git+https://github.com/notawhalea/ExpressJS-SaleOfCourses-App.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Mikita Pelikh <mikitapelikh@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/notawhalea/ExpressJS-SaleOfCourses-App/issues"
