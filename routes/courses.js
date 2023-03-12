@@ -1,12 +1,14 @@
 const {Router} = require('express')
+const Course = require('../models/course')
 const router = Router()
 
-router.get('/', (req, res) => {
-    // res.status(200);
-    // res.sendFile(path.join(__dirname, 'views', 'about.hbs'))
-    res.render('add', {
-        title: 'Add course',
-        isAdd: true
+router.get('/', async (req, res) => {
+    const courses = await Course.getAll()
+    res.render('courses', {
+        title: 'Courses',
+        isCourses: true,
+        courses
     })
+
 })
 module.exports = router
