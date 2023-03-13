@@ -1,1 +1,31 @@
 <h1>Card</h1>
+<div id="card">
+{{#if courses.length}}
+    <table>
+        <thead>
+            <tr>
+                <th>Course name</th>
+                <th>Count</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each courses}}
+            <tr>
+                <td>{{title}}</td>
+                <td>{{count}}</td>
+                <td>
+                    <button class="btn btm-small js-remove" data-id="{{id}}">Delete</button>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    <p><strong>Price:</strong> <span class="price">{{price}}</span></p>
+
+{{else}}
+    <p>Card is empty</p>
+    <p>BUT WE HAVE A DOGE!!!</p>
+    <img src="https://sun9-2.userapi.com/impg/dQJ0idtEa3uhOeEN82yX3MU8-yCM-SDWwsLQiA/eq01S3ioRKw.jpg?size=800x776&quality=95&sign=e6b602497cb5ad5a57e01089ea42e403&type=album" alt="doge">
+{{/if}}
+</div>
